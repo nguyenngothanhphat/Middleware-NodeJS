@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "git-cz": "^4.7.0",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.4"
   },
@@ -12,7 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "serve": "nodemon app.js"
+    "serve": "nodemon app.js",
+    "commit": "git-cz",
+    "commit:all": "git add . && git-cz",
+    "push": "git push -u origin $(git rev-parse --abbrev-ref HEAD)"
   },
   "author": "ThanhPhat",
   "license": "ISC"
